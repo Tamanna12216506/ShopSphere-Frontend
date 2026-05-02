@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: light;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	background:
+		radial-gradient(circle at top left, rgba(249, 168, 212, 0.22), transparent 30%),
+		radial-gradient(circle at top right, rgba(110, 231, 183, 0.16), transparent 24%),
+		#efe6f8;
+	color: #1e1b4b;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+::selection {
+	background: rgba(192, 132, 252, 0.35);
+}
+
+@layer components {
+	.shopsphere-card {
+		border-radius: 1rem;
+		border: 1px solid #e9d5ff;
+		background: #fff;
+		box-shadow: 0 4px 24px rgba(167, 139, 250, 0.1);
+		transition: all 200ms ease;
+	}
+
+	.shopsphere-card-hover {
+		transition: all 200ms ease;
+	}
+
+	.shopsphere-card-hover:hover {
+		transform: translateY(-0.25rem);
+		box-shadow: 0 8px 32px rgba(167, 139, 250, 0.2);
+	}
+
+	.shopsphere-input {
+		width: 100%;
+		border-radius: 0.75rem;
+		border: 1px solid #e9d5ff;
+		background: #faf5ff;
+		padding: 0.75rem 1rem;
+		transition: all 200ms ease;
+	}
+
+	.shopsphere-input:focus {
+		outline: none;
+		border-color: #c4b5fd;
+		box-shadow: 0 0 0 2px rgba(196, 181, 253, 0.5);
+	}
+
+	.shopsphere-button-primary {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		background: linear-gradient(90deg, #5b3f9a 0%, #c4b5fd 100%);
+		padding: 0.625rem 1.5rem;
+		font-weight: 600;
+		color: #fff;
+		transition: all 200ms ease;
+	}
+
+	.shopsphere-button-primary:hover {
+		transform: translateY(-0.125rem);
+		box-shadow: 0 10px 24px rgba(196, 181, 253, 0.3);
+	}
+
+	.shopsphere-button-ghost {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		border: 1px solid rgba(196, 181, 253, 0.5);
+		padding: 0.625rem 1.5rem;
+		font-weight: 600;
+		color: #5b3f9a;
+		transition: all 200ms ease;
+	}
+
+	.shopsphere-button-ghost:hover {
+		background: rgba(196, 181, 253, 0.1);
+	}
+}
